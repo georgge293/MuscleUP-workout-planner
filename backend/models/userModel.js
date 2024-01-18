@@ -16,6 +16,30 @@ const userSchema = new Schema({
     }
 })
 
+// static login method
+userSchema.statics.login = async function(email, password) {
+    
+    // validation
+    if (!email || !password) {
+        throw Error('All fields must be filled')
+    }
+
+    const user = await this.findOne({ email })
+
+    if (!user) {
+        throw Error('Incorrect email')
+    }
+
+    // compare inputted password with the stored hashed password
+    const match = await bcrypt.compare(password, user.password)
+
+    if(!match) {
+        throw Error('Incorrect password')
+    }
+
+    return user
+}
+
 // custom static signup method
 userSchema.statics.signup = async function (email, password) { // must use regular function not => function in order to use 'this' keyword
 
