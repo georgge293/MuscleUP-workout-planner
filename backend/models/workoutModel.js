@@ -16,6 +16,10 @@ const workoutSchema = new Schema({
     load: {
         type: Number,
         required: true
+    },
+    user_id: {
+        type: String,
+        required: true
     }
 }, {timestamps: true }) //automatically adds a timestamp property when the workout object is created
 
