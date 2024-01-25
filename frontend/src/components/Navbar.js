@@ -16,21 +16,23 @@ const Navbar = () => {
                 <Link to="/">
                     <h1>MuscleUP Fitness Tracker</h1>
                 </Link>
+                <nav>
+                    {user && (
+                        <div>
+                            <Link to="/library">Library</Link>
+                            <span>{user.email}</span>
+                            <button onClick={handleClick}>Log out</button>
+                        </div>
+                        
+                    )}
+                    {!user && (
+                        <div>
+                            <Link to="/login">Login</Link>
+                            <Link to="/signup">Signup</Link>
+                        </div>
+                    )}
+                </nav>
             </div>
-            <nav>
-                {user && (
-                    <div>
-                        <span>{user.email}</span>
-                        <button onClick={handleClick}>Log out</button>
-                    </div>
-                )}
-                {!user && (
-                    <div>
-                        <Link to="/login">Login</Link>
-                        <Link to="/signup">Signup</Link>
-                    </div>
-                )}
-            </nav>
         </header>
     )
 }
