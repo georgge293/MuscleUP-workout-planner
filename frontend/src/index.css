@@ -3,7 +3,7 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
+  --primary: #764cc5;
   --error: #e7195a;
 }
 body {
@@ -129,3 +129,47 @@ form.signup, form.login {
   background: #fff;
   border-radius: 4px;
 }
+
+.libraryNavButton {
+  padding-right: 30px;
+}
+
+.library-exercise {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* Optional: for rounded corners */
+  padding: 10px;
+  margin: 10px;
+  flex: 0 1 calc(33.333% - 20px); /* Subtract twice the margin */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.library-exercise h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.libraryWorkouts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pagination-button {
+  background: var(--primary); /* Primary color, make sure this variable is defined */
+  border: none;
+  color: #fff; /* White color text */
+  padding: 10px 20px; /* Padding around the text */
+  font-family: "Poppins", sans-serif; /* Fallback font in case Poppins isn't available */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  margin: 5px; /* Spacing between buttons */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+
+  /* Shadows for depth (optional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
