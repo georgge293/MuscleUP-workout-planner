@@ -4,7 +4,9 @@ const express = require('express') // require express package
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
+const libraryRoutes = require('./routes/library')
 
+const fetchExercises = require('./utils/syncExerciseDb')
 
 // express app
 const app = express() // start off the express app
@@ -22,11 +24,12 @@ app.use('/api/workouts', workoutRoutes) // attaches all routes in workout.js to 
 
 app.use('/api/user', userRoutes) // attaches all routes in workout.js to app
 
-
+app.use('/api/library', libraryRoutes)
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
+        fetchExercises()
         // listen for requests on port number 4000
         app.listen(process.env.PORT, () => {
             console.log('connected to db & listening on port', process.env.PORT) // we print "listening on port 4000" after

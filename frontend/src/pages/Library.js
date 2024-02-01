@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react" // import hooks
+import { useEffect, useState, useMemo } from "react" 
 import { useAuthContext } from "../hooks/useAuthContext"
 
 // components
 import LibraryExercise from '../components/LibraryExercise'
-import SearchBar from "../components/SearchBar"
+// import SearchBar from "../components/SearchBar"
 
 const Library = () => {
     const {user} = useAuthContext()
@@ -12,20 +12,11 @@ const Library = () => {
     const [searchQuery, setSearchQuery] = useState('')
 
 
-    const url = `https://exercisedb.p.rapidapi.com/exercises?limit=9&offset=${(currentPage-1)*10}`;
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'f641cf64b8msh630328807b4f583p1fe8c6jsn2078d3cfcd56',
-            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-        }
-    };
-
-    // fires function when component is rendered
+      // fires function when component is rendered
     useEffect(() => {
         // function declaration
         const fetchLibrary = async () => {
-            const response = await fetch(url, options);
+            const response = await fetch('/api/library');
             const json = await response.json() // passes json in response into json variable
 
             if (response.ok) {
@@ -37,21 +28,21 @@ const Library = () => {
         if (user){
             fetchLibrary()
         }
-    }, [user, currentPage])
+    }, [user, currentPage, options])
 
-    useEffect(() => {
-        if (searchQuery !== '') {
-            const fetchSearchResults = async () => {
-                const searchUrl = `https://exercisedb.p.rapidapi.com/exercises/name/${encodeURIComponent(searchQuery)}?limit=9`;
-                const response = await fetch(searchUrl, options);
-                if (response.ok) {
-                    const json = await response.json();
-                    setLibraryExercises(json);
-                }
-            };
-            fetchSearchResults();
-        }
-    }, [searchQuery]);
+    // useEffect(() => {
+    //     if (searchQuery !== '') {
+    //         const fetchSearchResults = async () => {
+    //             const searchUrl = `https://exercisedb.p.rapidapi.com/exercises/name/${encodeURIComponent(searchQuery)}?limit=9`;
+    //             const response = await fetch(searchUrl, options);
+    //             if (response.ok) {
+    //                 const json = await response.json();
+    //                 setLibraryExercises(json);
+    //             }
+    //         };
+    //         fetchSearchResults();
+    //     }
+    // }, [searchQuery, options]);
 
     const goToNextPage = () => {
         setCurrentPage((prevPage) => prevPage + 1);
