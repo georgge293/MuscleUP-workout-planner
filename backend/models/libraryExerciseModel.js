@@ -25,7 +25,7 @@ const workoutSchema = new Schema({
         type: Number,
         required: true
     },
-    gif: {
+    gifUrl: {
         type: String,
         required: false
     }

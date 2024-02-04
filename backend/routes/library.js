@@ -9,6 +9,6 @@ const router = express.Router()
 
 router.use(requireAuth)
 
-router.get('/library', getLibraryWorkouts)
+router.get('/', getLibraryWorkouts)
 
 module.exports = router
