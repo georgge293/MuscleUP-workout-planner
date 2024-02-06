@@ -19,7 +19,7 @@ const Library = () => {
             const offset = (currentPage - 1) * 9;
             let url = `/api/library?limit=9&offset=${offset}`;
 
-            if(searchQuery) {
+            if(searchQuery.trim()) { // .trim() ensures that we ignore uneccesary whitespace
                 url += `&query=${encodeURIComponent(searchQuery)}`;
             }
             const response = await fetch(url, {
@@ -48,12 +48,21 @@ const Library = () => {
         setCurrentPage((prevPage) => prevPage - 1);
     };
 
+    const handleSearchChange = (query) => {
+        setSearchQuery(query);
+        if(!query.trim()) {
+            setCurrentPage(1); // if we remove contents in search bar bring us back to the first page
+        }
+    }
+
+
+    
     return (
         <div className="library">
             <div className="libraryWorkouts">
-                <SearchBar onSearchChange={setSearchQuery}/>
+                <SearchBar onSearchChange={handleSearchChange}/>
                 {libraryExercises && libraryExercises.map((exercise) => (
-                    <LibraryExercise key={exercise.id} workout={exercise} /> // Use the state variable here
+                    <LibraryExercise key={exercise.id} workout={exercise} />
                 ))}
             </div>
             <div className="pagination">
