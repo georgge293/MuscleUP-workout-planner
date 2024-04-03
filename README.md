@@ -1,9 +1,7 @@
 <h1 align="center">MuscleUP Workout Planner</h1>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=tUjxPNXM2J0">
-    <img src="https://img.youtube.com/vi/tUjxPNXM2J0/0.jpg" alt="Demo Video">
-  </a>
+https://github.com/georgge293/MuscleUP-workout-planner/assets/58405210/6376d205-8d06-4369-b0f4-fa5d6c9009f9
 </p>
 
 <p align="center">
@@ -12,6 +10,9 @@
 
 ## Tech Stack
 - MongoDB
+
+
+
 - Express
 - React
 - Node
