@@ -14,6 +14,9 @@
   <a href="https://example.com">Live Demo</a>
 </p>
 
+Made using RapidAPI's [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
+
+
 ## Getting Started
 
 To run locally must run backend and frontend seperately each in a different powershell tab
@@ -34,3 +37,5 @@ cd frontend
 npm install
 npm start
 ```
+
+
