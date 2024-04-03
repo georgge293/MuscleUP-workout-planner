@@ -11,14 +11,14 @@
 </p>
 
 ## Tech Stack
-MongoDB
-Express
-React
-Node
+- MongoDB
+- Express
+- React
+- Node
 
 ## Other Technologies used
-JWT (JSON Web Tokens) for authentication
-RapidAPI's [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
+- JWT (JSON Web Tokens) for authentication
+- RapidAPI's [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
 ## Getting Started
 
