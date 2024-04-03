@@ -1,8 +1,8 @@
 <h1 align="center">MuscleUP Workout Planner</h1>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=Eh2xL_cSj14">
-    <img src="https://img.youtube.com/vi/Eh2xL_cSj14/0.jpg" alt="Demo Video">
+  <a href="https://www.youtube.com/watch?v=tUjxPNXM2J0">
+    <img src="https://img.youtube.com/vi/tUjxPNXM2J0/0.jpg" alt="Demo Video">
   </a>
 </p>
 
