@@ -10,9 +10,6 @@
   A full-stack fitness planner web application that allows users to log their own workout progression. Additionally provides users with a library with access to over 1300 exercises with in detail guide and instructions on how to perform each exercise with proper form mitigating.
 </p>
 
-<p align="center">
-  <a href="https://example.com">Live Demo</a>
-</p>
 
 Made using RapidAPI's [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
@@ -37,5 +34,7 @@ cd frontend
 npm install
 npm start
 ```
+
+Go to http://localhost:3000 on your web browser of choice
 
 
