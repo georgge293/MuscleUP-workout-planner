@@ -7,13 +7,10 @@ https://github.com/georgge293/MuscleUP-workout-planner/assets/58405210/82883d29-
 </p>
 
 ## Tech Stack
-- MongoDB
-
-
-
-- Express
-- React
-- Node
+- [MongoDB](https://www.mongodb.com/) 
+- [Express](https://expressjs.com/)
+- [React](https://reactjs.org/)
+- [Node](https://nodejs.org/en)
 
 ## Other Technologies used
 - JWT (JSON Web Tokens) for authentication
