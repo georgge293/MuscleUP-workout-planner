@@ -7,12 +7,18 @@
 </p>
 
 <p align="center">
-  A full-stack fitness planner web application that allows users to log their own workout progression. Additionally provides users with a library with access to over 1300 exercises with in detail guide and instructions on how to perform each exercise with proper form mitigating.
+  A full-stack fitness planner web application that allows users to log their own workout progression. Additionally provides users with a library with access to over 1300 exercises with in detail guide and instructions on how to perform each exercise with proper form mitigating risk of injury.
 </p>
 
+## Tech Stack
+MongoDB
+Express
+React
+Node
 
-Made using RapidAPI's [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
-
+## Other Technologies used
+JWT (JSON Web Tokens) for authentication
+RapidAPI's [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
 ## Getting Started
 
